@@ -1,24 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
+import M from "materialize-css";
 
-function App() {
+import Topbar from './components/Topbar';
+import SideMenu from './components/SideMenu';
+import SiteFooter from './components/Footer';
+import Navbar from './components/Navbar';
+
+import Welcome from './pages/Welcome';
+import Home from './pages/Home';
+import Events from './pages/Events.js';
+import Book from './pages/Book';
+import Wander from './pages/Wander';
+import Feedback from './pages/Feedback';
+import Tips from './pages/Tips';
+import Blog from './pages/Blog';
+import BlogView from './pages/BlogView';
+
+import FAQs from './pages/FAQ';
+
+import Team from './pages/Team';
+import Testimonials from './pages/Testimonials';
+import About from './pages/About';
+import Contactus from './pages/Contactus';
+
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import Protection from './pages/Protection';
+
+import "materialize-css/dist/css/materialize.min.css";
+import "@mdi/font/css/materialdesignicons.min.css";
+import "./assets/fonts/mdi/appicon/appicon.css";
+import "./App.scss";
+import { Footer } from "react-materialize";
+
+const App = () => {
+
+  useEffect(() => {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, {});
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <Topbar />
+        <SideMenu />
+        <div className="menu-close"><i className="mdi mdi-close"></i></div>
+        <div className="content-area">
+          <Switch>
+            <Route exact path="/" component={Welcome} />
+            <Route path="/home" component={Home} />
+            <Route path="/blog" component={Tips} />
+            <Route path="/blog-item" component={BlogView} />
+
+            <Route path="/events" component={Events} />
+            <Route path="/book" component={Book} />
+
+
+            <Route path="/wander" component={Wander} />
+            <Route path="/feedback" component={Feedback} />
+            <Route path="/faqs" component={FAQs} />
+            <Route path="/team" component={Team} />
+            <Route path="/testimonials" component={Testimonials} />
+            <Route path="/about-us" component={About} />
+            <Route path="/contact-us" component={Contactus} />
+
+            <Route path="/terms-of-use" component={Terms} />
+            <Route path="/privacy-policy" component={Privacy} />
+            <Route path="/data-protection" component={Protection} />
+          </Switch>
+
+          <SiteFooter />
+        </div>
+        {/* <Navbar /> */}
+      </>
+    </Router>
   );
 }
 
