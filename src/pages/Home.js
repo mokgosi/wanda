@@ -70,7 +70,7 @@ const Home = () => {
 
             {/* <!-- BLogs --> */}
 
-            {/* <div className="container">
+            <div className="container">
                 <div className="section">
                     <div className="row mb0">
                         <div className="col s12 pad-0">
@@ -79,7 +79,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             {/* <!-- VIRTUAL TOURS COMPONENT --> */}
 
