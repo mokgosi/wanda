@@ -28,7 +28,7 @@ const Tips = () => {
                     <div className="row ui-mediabox blogs" >
 
                         {tips.map((t, i) => (
-                            <div className="col-item col s12 ">
+                            <div className="col-item col s12" key={t.id}>
                                 <Link to="/blog-item">
                                     <h4 className="title">{t.title}</h4>
                                 </Link>
@@ -58,17 +58,17 @@ const Tips = () => {
                             </div>
                         ))}
                     </div>
-                    <div class="spacer"></div>
-                    <div class="row ">
-                        <div class="col s12 pad-0">
-                            <h5 class="bot-20 sec-tit">Blog Categories</h5>
-                            <div class="spacer"></div>
-                            <div class="row settings-row ">
+                    <div className="spacer"></div>
+                    <div className="row ">
+                        <div className="col s12 pad-0">
+                            <h5 className="bot-20 sec-tit">Blog Categories</h5>
+                            <div className="spacer"></div>
+                            <div className="row settings-row ">
                                 {categories.map((c, i) => (
-                                    <div class="col s6">
-                                        <div class="setting-box  center  img-box ">
-                                            <a class="img-wrap round" href="#!.html">
-                                                <img alt="image" class="responsive-img " src={c.image} />
+                                    <div className="col s6" key={c.id}>
+                                        <div className="setting-box  center  img-box ">
+                                            <a className="img-wrap round" href="#!.html">
+                                                <img alt="image" className="responsive-img " src={c.image} />
                                             </a>
                                             <a href="#!.html">
                                                 <h6>{c.category}</h6>

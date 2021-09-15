@@ -54,28 +54,28 @@ const Contactus = () => {
                             <div className="input-field col s12">
                                 <i className="mdi mdi-account-outline prefix"></i>
                                 <input id="first_name" type="text" className="validate" />
-                                <label for="first_name">First Name</label>
+                                <label htmlFor="first_name">First Name</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
                                 <i className="mdi mdi-account-outline prefix"></i>
                                 <input id="last_name2" type="text" className="validate" />
-                                <label for="last_name2">Last Name</label>
+                                <label htmlFor="last_name2">Last Name</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
                                 <i className="mdi mdi-email-outline prefix"></i>
                                 <input id="email" type="email" className="validate" />
-                                <label for="email">Email</label>
+                                <label htmlFor="email">Email</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12 textarea">
                                 <i className="mdi mdi-pencil prefix"></i>
                                 <textarea id="textarea-prefix" className="materialize-textarea"></textarea>
-                                <label for="textarea-prefix">Tell us more</label>
+                                <label htmlFor="textarea-prefix">Tell us more</label>
                             </div>
                         </div>
                         <div className="row ">

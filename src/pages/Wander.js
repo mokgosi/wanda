@@ -20,7 +20,7 @@ const Discover = () => {
                 <div className="section pt0 pb0">
                     <div className="row ui-mediabox portfolio fullwidth">
                         {wander.map((w, i) => (
-                            <div className="col s12">
+                            <div className="col s12" key={w.id}>
                                 <a className="img-wrap" href={w.image} data-fancybox="images" data-caption={w.title}>
                                     <img alt="image" className="" style={{ width: `100%` }} src={w.image} />
                                 </a>
@@ -30,8 +30,8 @@ const Discover = () => {
                                     <a href="#!">Explore <i className="mdi mdi-arrow-right"></i></a>
                                     <div className="user-actions">
                                         <a href="#!" className='active'><i className="mdi mdi-thumb-up-outline"></i><span>845</span></a>
-                                        <a href="#!" ><i class="mdi mdi-heart-outline"></i><span>376</span></a>
-                                        <a href="#!" ><i class="mdi mdi-comment-outline"></i><span>731</span></a>
+                                        <a href="#!" ><i className="mdi mdi-heart-outline"></i><span>376</span></a>
+                                        <a href="#!" ><i className="mdi mdi-comment-outline"></i><span>731</span></a>
                                     </div>
                                 </div>
                             </div>

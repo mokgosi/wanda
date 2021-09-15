@@ -35,7 +35,7 @@ const SideMenu = () => {
                             <div className=" waves-effect   index ">
                                 <Link to="/faqs">
                                     <i className="mdi mdi-camera-timer"></i>
-                                    <span className="title">FAQ</span>
+                                    <span className="title">FAQs</span>
                                 </Link>
                             </div>
                         </li>
@@ -67,7 +67,7 @@ const SideMenu = () => {
                             <div className=" waves-effect index ">
                                 <Link to="/about-us">
                                     <i className="mdi mdi-bulletin-board"></i>
-                                    <span className="title">About</span>
+                                    <span className="title">About Us</span>
                                 </Link>
                             </div>
                         </li>

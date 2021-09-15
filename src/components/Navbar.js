@@ -10,7 +10,11 @@ const Navbar = (props) => {
                 <li><Link to="/blog"><i className="mdi mdi-image-album"></i><span>Local Tips</span></Link></li>
                 <li><Link to="/events"><i className="mdi mdi-calendar-clock"></i><span>Book</span></Link></li>
                 <li><Link to="/wander"><i className="mdi mdi-compass-outline"></i><span>Wander</span></Link></li>
-                <li><Link to="/feedback"><i className="mdi mdi-comment-outline"></i><span>Feedback</span></Link></li>
+                <li>
+                    <a href="https://docs.google.com/forms/d/1UXTkalHB-bdMNCysRTMdt6L3ILVyZuk09CfBc2MOW90/edit?usp=sharing" target="_blank" rel="noreferrer noopener">
+                        <i className="mdi mdi-comment-outline"></i><span>Feedback</span>
+                    </a>
+                </li>
             </ul>
         </div>
     );

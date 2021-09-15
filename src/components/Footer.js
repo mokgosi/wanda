@@ -17,7 +17,7 @@ const Footer = () => {
                     </div>
                     <div className="link-wrap">
                         <ul className="link-ul">
-                            <li><a href="#!"><i className="mdi mdi-phone"></i> +270 000 0000</a></li>
+                            <li><a href="#!"><i className="mdi mdi-phone"></i> +27WanderfullySo.</a></li>
                             <li><a href="#!"><i className="mdi mdi-email"></i>email@wonderfullyso.com</a></li>
                             <li><a href="#!"><i className="mdi mdi-map-marker"></i>Cape Town, South Africa</a></li>
                         </ul>

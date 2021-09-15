@@ -1,7 +1,23 @@
 import React from 'react';
+import $ from 'jquery';
 
 
 const Topbar = () => {
+
+    // $(document).on('click', '.back-button', function (e) {
+    //     $('.sidemenu').sidenav('close');
+    //     $('.sidesettings').sidenav('close');
+    //     if (!$(this).hasClass("back-nav")) {
+    //         e.preventDefault();
+    //         window.history.back();
+    //     }
+    // });
+
+    // var elem = document.querySelectorAll('.back-button');
+    // elem.addEventListener("click", function () {
+    //     alert('here');
+    // });
+
     return (
         <nav className="fix_topscroll logo_on_fixed topbar navigation">
             <div className="nav-wrapper container">

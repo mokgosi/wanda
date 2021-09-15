@@ -84,7 +84,7 @@ const Protection = () => {
                             <div className="input-field col s12">
                                 <i className="mdi mdi-account-outline prefix"></i>
                                 <input id="first_name" type="text" className="validate" />
-                                <label for="first_name">First Name</label>
+                                <label htmlFor="first_name">First Name</label>
                             </div>
                         </div>
 
@@ -92,7 +92,7 @@ const Protection = () => {
                             <div className="input-field col s12">
                                 <i className="mdi mdi-account-outline prefix"></i>
                                 <input id="last_name2" type="text" className="validate" />
-                                <label for="last_name2">Last Name</label>
+                                <label htmlFor="last_name2">Last Name</label>
                             </div>
                         </div>
 
@@ -100,7 +100,7 @@ const Protection = () => {
                             <div className="input-field col s12">
                                 <i className="mdi mdi-email-outline prefix"></i>
                                 <input id="email" type="email" className="validate" />
-                                <label for="email">Email</label>
+                                <label htmlFor="email">Email</label>
                             </div>
                         </div>
 
@@ -108,7 +108,7 @@ const Protection = () => {
                             <div className="input-field col s12 textarea">
                                 <i className="mdi mdi-pencil prefix"></i>
                                 <textarea id="textarea-prefix" className="materialize-textarea"></textarea>
-                                <label for="textarea-prefix">Describe your issue</label>
+                                <label htmlFor="textarea-prefix">Describe your issue</label>
                                 <span className="helper-text" data-error="Incorrect Email" data-success="Correct Email">Please
                                     briefly explain your issue. Please also indicate your relationship with WanderfullySo
                                     (for example you’re a Wanderer, an advertiser, or a regulator)</span>

@@ -29,80 +29,75 @@ const Events = () => {
 
                     <div className="spacer"></div>
 
-                    <div class="row mb0">
-                        <div class="col s12 pad-0"><h5 class="bot-20 sec-tit  ">Upcoming Events</h5>
-                            <div class="spacer"></div>
+                    <div className="row mb0">
+                        <div className="col s12 pad-0"><h5 className="bot-20 sec-tit  ">Upcoming Events</h5>
+                            <div className="spacer"></div>
 
-                            <ul class="events">
+                            {/* <ul className="events">
 
                                 {upcoming.map((e, i) => (
 
-                                    <li class="event-item" key={e.id}>
+                                    <li className="event-item" key={e.id}>
                                         <a href="ui-app-event-view.html" >
-                                            <img alt="image" class="image" style={{ width: `100%` }} src={e.image} />
+                                            <img alt="image" className="image" style={{ width: `100%` }} src={e.image} />
                                         </a>
-                                        <div class="info">
+                                        <div className="info">
 
-                                            <div class="date-bubble"><span>27</span>Jan</div>
+                                            <div className="date-bubble"><span>27</span>Jan</div>
 
                                             <a href="ui-app-event-view.html" >
-                                                <h4 class="title ">{e.title}</h4>
+                                                <h4 className="title ">{e.title}</h4>
                                             </a>
-                                            <div class="organizer">{e.organizer}</div>
-                                            <div class="time">{e.time}</div>
-                                            <div class="location">{e.location}</div>
-                                            <div class="people avatar-list">
+                                            <div className="organizer">{e.organizer}</div>
+                                            <div className="time">{e.time}</div>
+                                            <div className="location">{e.location}</div>
+                                            <div className="people avatar-list">
                                                 <a href="#!"><img src={UserPlaceholder} alt={e.name} title={e.name}
-                                                    class="circle" /></a>
+                                                    className="circle" /></a>
                                                 <a href="#!"><img src={UserPlaceholder} alt={e.name} title={e.name}
-                                                    class="circle" /></a>
+                                                    className="circle" /></a>
                                                 <a href="#!"><img src={UserPlaceholder} alt={e.name} title={e.name}
-                                                    class="circle" /></a>
+                                                    className="circle" /></a>
                                                 <a href="#!"><img src={UserPlaceholder} alt={e.name} title={e.name}
-                                                    class="circle" /></a>
-                                                <div class="people-total">250+ going</div>
+                                                    className="circle" /></a>
+                                                <div className="people-total">250+ going</div>
                                             </div>
                                         </div>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
 
-                    <div class="row mb0">
-                        <div class="col s12 pad-0">
-                            <h5 class="bot-20 sec-tit  ">Popular Events</h5>
-                            <div class="spacer"></div>
+                    <div className="row mb0">
+                        <div className="col s12 pad-0">
+                            <h5 className="bot-20 sec-tit  ">Popular Events</h5>
+                            <div className="spacer"></div>
 
-                            <ul class="events mini events-masonry row " >
+                            {/* <ul className="events mini events-masonry row " >
                                 {upcoming.map((e, i) => (
-                                    <li class="event-item col s6">
-                                        <div class="item-wrap ">
+                                    <li className="event-item col s6">
+                                        <div className="item-wrap ">
                                             <a href="ui-app-event-view.html" >
-                                                <img alt="image" class="image" style={{ width: `100%` }} src={e.image} />
+                                                <img alt="image" className="image" style={{ width: `100%` }} src={e.image} />
                                             </a>
-                                            <div class="info">
-                                                <div class="date-bubble"><span>27</span>Jan</div>
+                                            <div className="info">
+                                                <div className="date-bubble"><span>27</span>Jan</div>
                                                 <a href="ui-app-event-view.html" >
-                                                    <h4 class="title ">{e.title}</h4>
+                                                    <h4 className="title ">{e.title}</h4>
                                                 </a>
-                                                <div class="organizer">{e.organizer}</div>
-                                                <div class="time">{e.time}</div>
-                                                <div class="location">{e.location}</div>
+                                                <div className="organizer">{e.organizer}</div>
+                                                <div className="time">{e.time}</div>
+                                                <div className="location">{e.location}</div>
                                             </div>
                                         </div>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
 
             <Navbar />
         </>
