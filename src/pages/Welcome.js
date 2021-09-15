@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Slides from '../data/slides';
 import useWindowDimensions from "../utils/useWindowDimensions";
 import AppCarousel from '../components/AppCarousel';
+import SiteIcon from '../assets/images/32x32.png';
 
 const Welcome = () => {
 
@@ -14,7 +15,7 @@ const Welcome = () => {
     return (
         <>
             <h1 className="white-text center welcome-logo index-welcome">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="300.000000pt"
+                {/* <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="300.000000pt"
                     viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#ffffff" stroke="none">
                         <path
@@ -30,7 +31,9 @@ const Welcome = () => {
                             d="M2148 1470 c-42 -13 -77 -43 -78 -68 0 -12 -6 -31 -12 -42 -11 -17 -10 -22 2 -31 11 -8 12 -12 3 -16 -7 -2 -13 -13 -13 -23 0 -10 -4 -22 -10 -25 -14 -9 -12 -57 4 -77 7 -10 22 -18 33 -18 23 0 53 39 53 69 0 11 5 23 10 26 6 3 10 14 10 25 0 10 10 38 21 62 37 75 41 85 37 104 -4 22 -22 26 -60 14z m32 -41 c0 -5 -10 -30 -23 -57 -12 -26 -29 -67 -37 -92 -7 -25 -20 -54 -28 -65 -12 -16 -13 -17 -8 -2 4 12 1 17 -9 15 -13 -3 -15 0 -15 25 0 8 4 7 11 -3 8 -12 9 -9 5 12 -3 15 -2 30 4 33 5 3 9 23 8 43 -2 56 10 81 45 96 33 14 47 12 47 -5z">
                         </path>
                     </g>
-                </svg> Wanderfullyso
+                </svg>  */}
+                <div><img src={SiteIcon} alt="" title="" className="" /></div>
+                Wanderfullyso
             </h1>
             <div className="fullfixed">
                 <div className="carousel carousel-fullscreen carousel-slider walk_carousel" style={{ height: height, width: width }}>
