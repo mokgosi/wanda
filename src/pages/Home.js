@@ -11,6 +11,7 @@ import BookFreeVirtualTour from '../components/BookFreeVirtualTour';
 import LikeALocal from '../components/LikeALocal';
 import Blogs from '../components/Blogs';
 import Navbar from '../components/Navbar';
+import Subscribe from '../components/Subscribe';
 
 const Home = () => {
 
@@ -65,6 +66,7 @@ const Home = () => {
             {/* <!-- VIRTUAL TOURS COMPONENT --> */}
 
             <BookFreeVirtualTour />
+            <Subscribe />
 
             {/* <!-- BLogs --> */}
 

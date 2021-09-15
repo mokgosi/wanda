@@ -1,4 +1,10 @@
+import M from "materialize-css";
+
 const Subscribe = () => {
+
+    var elems = document.querySelectorAll('#modal');
+    var instances = M.Modal.init(elems, {});
+
     return (
         <div id="modal" class="modal default-close">
             <div className="modal-content ">
