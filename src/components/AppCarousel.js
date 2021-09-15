@@ -13,6 +13,8 @@ const AppCarousel = ({ slides, height, width }) => {
             indicators: true, // this option is required for autoplay functionnality
         });
 
+        console.log(height);
+
         // custom function for autoplaying 
         let indicatorItems = document.querySelectorAll('.carousel .indicator-item'),
             slideTime = 3500,
@@ -37,7 +39,7 @@ const AppCarousel = ({ slides, height, width }) => {
     return (
         <>
             {slides.map((s, i) => (
-                <a className="carousel-item" key={s.id} href="#carousel-slide-0!">
+                <a className="carousel-item" key={s.id} href="#carousel-slide-0!" height={height} width={width}>
                     <div className="bg" style={{ backgroundImage: `url(${s.image})` }}>
                         {/* <img src={s.image} height={height} width={width} /> */}
                     </div>

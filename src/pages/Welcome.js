@@ -33,8 +33,8 @@ const Welcome = () => {
                 </svg> Wanderfullyso
             </h1>
             <div className="fullfixed">
-                <div className="carousel carousel-fullscreen carousel-slider walk_carousel">
-                    <AppCarousel slides={slides} height={height} width={width} />
+                <div className="carousel carousel-fullscreen carousel-slider walk_carousel" style={{ height: height, width: width }}>
+                    <AppCarousel slides={slides} />
                 </div>
             </div>
 

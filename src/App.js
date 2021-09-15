@@ -39,6 +39,21 @@ const App = () => {
   useEffect(() => {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, {});
+
+    var nav = document.querySelectorAll('.sidenav');
+    var navigator = M.Sidenav.init(nav, {
+
+      onOpenStart: function () {
+        document.querySelector('body').classList.add("menu-open");
+        //console.log("onopen");
+      },
+      onCloseStart: function () {
+        document.querySelector('body').classList.remove("menu-open");
+      },
+      inDuration: 250,
+      outDuration: 250,
+
+    });
   });
 
   return (
@@ -46,7 +61,7 @@ const App = () => {
       <>
         <Topbar />
         <SideMenu />
-        <div className="menu-close"><i className="mdi mdi-close"></i></div>
+
         <div className="content-area">
           <Switch>
             <Route exact path="/" component={Welcome} />

@@ -18,7 +18,7 @@ const SideMenu = () => {
     return (
         <>
             <ul id="slide-nav" className='sidenav sidemenu'>
-                <li className="user-wrap">
+                {/* <li className="user-wrap">
                     <div className="user-view row">
                         <div className="col s3 imgarea">
                             <a href="#user" className="status available">
@@ -26,49 +26,79 @@ const SideMenu = () => {
                             </a>
                         </div>
                     </div>
-                </li>
+                </li> */}
                 <li className="menulinks">
                     <ul className="collapsible">
                         <li className="lvl1 ">
                             <div className=" waves-effect   index ">
-                                <a href="ui-pages-faq.html">
+                                <Link to="/faqs">
                                     <i className="mdi mdi-camera-timer"></i>
-                                    <span className="title">FAQ</span></a>
+                                    <span className="title">FAQ</span>
+                                </Link>
                             </div>
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect   index ">
-                                <a href="ui-apps.html">
+                                <Link to="/blog">
                                     <i className="mdi mdi-all-inclusive"></i>
                                     <span className="title">Blog</span>
-                                    <span className="badge">9</span></a>
+                                </Link>
                             </div>
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect   index ">
-                                <a href="ui-pages-testimonials.html">
+                                <Link to="/testimonials">
                                     <i className="mdi mdi-arrange-send-to-back"></i>
-                                    <span className="title">Testimonials</span></a>
+                                    <span className="title">Testimonials</span>
+                                </Link>
                             </div>
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect   index ">
-                                <a href="ui-pages-team.html">
+                                <Link to="/team">
                                     <i className="mdi mdi-border-outside"></i>
-                                    <span className="title">Team</span><span className="badge">9</span></a>
+                                    <span className="title">Team</span>
+                                </Link>
                             </div>
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect index ">
-                                <a href="ui-pages-aboutus.html">
+                                <Link to="/about-us">
                                     <i className="mdi mdi-bulletin-board"></i>
-                                    <span className="title">About</span></a>
+                                    <span className="title">About</span>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="lvl1 ">
+                            <div className=" waves-effect index ">
+                                <Link to="/privacy-policy">
+                                    <i className="mdi mdi-bulletin-board"></i>
+                                    <span className="title">Privacy Policy</span>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="lvl1 ">
+                            <div className=" waves-effect index ">
+                                <Link to="/terms-of-use">
+                                    <i className="mdi mdi-bulletin-board"></i>
+                                    <span className="title">Terms of Use</span>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="lvl1 ">
+                            <div className=" waves-effect index ">
+                                <Link to="/data-protection">
+                                    <i className="mdi mdi-bulletin-board"></i>
+                                    <span className="title">Data Protection</span>
+                                </Link>
                             </div>
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect index">
-                                <a href="ui-pages-contactus.html"><i className="mdi mdi-beaker"></i><span
-                                    className="title">Contact</span></a>
+                                <Link to="/contact-us">
+                                    <i className="mdi mdi-beaker"></i>
+                                    <span className="title">Contactus</span>
+                                </Link>
                             </div>
                         </li>
                     </ul>
@@ -87,6 +117,7 @@ const SideMenu = () => {
                 <li className="copy-wrap">
                     <div className="copyright">&copy; Copyright @ Wanderfullyso</div>
                 </li>
+                <div className="menu-close"><i className="mdi mdi-close sidenav-close"></i></div>
             </ul>
             {/* <nav className="light-blue">
                 <a href="#" className="sidenav-trigger" onClick={() => setSlider(s => !s)}>
