@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import M from "materialize-css";
+import SiteIcon from '../assets/images/32x32.png';
 
 const SideMenu = () => {
 
@@ -18,15 +19,16 @@ const SideMenu = () => {
     return (
         <>
             <ul id="slide-nav" className='sidenav sidemenu'>
-                {/* <li className="user-wrap">
+                <li className="user-wrap">
                     <div className="user-view row">
                         <div className="col s3 imgarea">
                             <a href="#user" className="status available">
-                                <img className="circle" src="../assets/images/placeholders/menu-user.jpg" alt="menu user" />
+                                <div><img src={SiteIcon} alt="" title="" className="" /></div>
+                                {/* <img className="circle" src="../assets/images/placeholders/menu-user.jpg" alt="menu user" /> */}
                             </a>
                         </div>
                     </div>
-                </li> */}
+                </li>
                 <li className="menulinks">
                     <ul className="collapsible">
                         <li className="lvl1 ">
@@ -37,7 +39,7 @@ const SideMenu = () => {
                                 </Link>
                             </div>
                         </li>
-                        <li className="lvl1 ">
+                        {/* <li className="lvl1 ">
                             <div className=" waves-effect   index ">
                                 <Link to="/blog">
                                     <i className="mdi mdi-all-inclusive"></i>
@@ -60,7 +62,7 @@ const SideMenu = () => {
                                     <span className="title">Team</span>
                                 </Link>
                             </div>
-                        </li>
+                        </li> */}
                         <li className="lvl1 ">
                             <div className=" waves-effect index ">
                                 <Link to="/about-us">
