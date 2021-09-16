@@ -11,7 +11,7 @@ const Navbar = (props) => {
                 <li><Link to="/events"><i className="mdi mdi-calendar-clock"></i><span>Book</span></Link></li>
                 <li><Link to="/wander"><i className="mdi mdi-compass-outline"></i><span>Wander</span></Link></li>
                 <li>
-                    <a href="https://docs.google.com/forms/d/1UXTkalHB-bdMNCysRTMdt6L3ILVyZuk09CfBc2MOW90/edit?usp=sharing" target="_blank" rel="noreferrer noopener">
+                    <a href="https://forms.gle/JESdQe8kReYZunfz5" target="_blank" rel="noreferrer noopener">
                         <i className="mdi mdi-comment-outline"></i><span>Feedback</span>
                     </a>
                 </li>

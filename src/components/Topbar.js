@@ -45,12 +45,6 @@ const Topbar = () => {
                 <a href="#" data-target="slide-nav" className="waves-effect waves-circle navicon sidenav-trigger show-on-large">
                     <i className="app-icon-menu61"></i>
                 </a>
-                <a href="#" data-target="slide-settings" className="waves-effect waves-circle navicon right sidenav-trigger show-on-large">
-                    <i className="app-icon-equalizer2"></i>
-                </a>
-                <a href="#" data-target="" className="waves-effect waves-circle navicon right nav-site-mode show-on-large">
-                    <i className="app-icon-brightness-contrast"></i>
-                </a>
             </div>
         </nav>
     );

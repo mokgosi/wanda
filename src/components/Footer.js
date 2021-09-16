@@ -28,7 +28,7 @@ const Footer = () => {
 
             <div className="footer-copyright">
                 <div className="container">
-                    &copy; Copyright <a href="https://www.wanderfullyso.com/">Wanderfullyso</a>. All rights reserved.
+                    &copy; Copyright <a href="https://www.wanderfullyso.com/">WanderfullySo</a>. All rights reserved.
                 </div>
             </div>
         </footer>
