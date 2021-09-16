@@ -27,7 +27,7 @@ const Privacy = () => {
                             <p>We wrote this policy to help you understand what information we collect, how we use it and
                                 what choices you have about it. We’ve tried our best to explain things in a simple and clear
                                 way. We welcome your questions and comments on this policy.</p>
-                            <ul className="collapsible expandable">
+                            <ul className="collapsible expandable popout">
                                 <li className="">
                                     <div className="collapsible-header"><i className="mdi mdi-file-outline"></i>How & Why We Collect
                                         Your Information

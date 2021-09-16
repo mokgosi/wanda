@@ -37,6 +37,9 @@ import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
 
+
+
+
   useEffect(() => {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, {});

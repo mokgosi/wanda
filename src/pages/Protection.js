@@ -33,7 +33,7 @@ const Protection = () => {
                                 to this will not receive a response to a submission of this form.​ </p>
                             <p>Questions may also include the requests listed below:</p>
 
-                            <ul className="collapsible expandable">
+                            <ul className="collapsible expandable popout">
                                 <li className="">
                                     <div className="collapsible-header"><i className="mdi mdi-file-outline"></i>Your right to access
                                         the information we hold about you</div>

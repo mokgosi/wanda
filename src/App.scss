@@ -3,6 +3,7 @@
 
 @import "assets/css/materializecss/_variables.scss";
 @import "assets/css/materializecss/_general.scss";
+@import "assets/css/materializecss/_preloader.scss";
 @import "assets/css/materializecss/_ui.scss";
 @import "assets/css/materializecss/_carousel.scss";
 @import "assets/css/materializecss/_carousel-home-screen.scss";
@@ -42,7 +43,6 @@
 
 
 // @import url("variables.css");
-
 // @import url("_general.css");
 // @import url("_preloader.css");
 // @import url("_ui.css");
@@ -64,7 +64,7 @@
 // @import url("_modal.css");
 // @import url("_topbar.css");
 // @import url("_navigation.css");
-// /* @import url("_navigation-centered.css"); */
+// @import url("_navigation-centered.css");
 // @import url("_navigation-dark.css");
 // @import url("_navigation-colored.css");
 // @import url("_subpages.css");
@@ -99,11 +99,10 @@
 // @import url("_welcome.css");
 // @import url("_error.css");
 // @import url("_search.css");
+
 // @import url("_pricing.css");
 // @import url("_invoice.css");
 // @import url("_notifications.css");
-
-
 // @import url("_profile-edit.css");
 // @import url("_app-settings.css");
 // @import url("_clients.css");
@@ -114,7 +113,6 @@
 // @import url("_fancybox.css");
 // @import url("_image-filter.css");
 // @import url("_shadow.css");
-
 // @import url("_team.css");
 // @import url("_charts.css");
 

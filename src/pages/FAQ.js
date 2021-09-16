@@ -20,7 +20,7 @@ const FAQ = () => {
                 </div>
             </div>
             <div className="container over">
-                <div className="section ui-faq">
+                <div className="section">
                     <div className="row ">
                         <div className="col s12 pad-0">
                             <ul className="collapsible expandable popout">

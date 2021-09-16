@@ -14,6 +14,21 @@ const SideMenu = () => {
         var instances = M.Sidenav.init(sidenav, {
             edge: 'left'
         });
+
+        // let sidenav = document.querySelectorAll('.sidenav');
+
+        // $(document).on('click', '.back-button', function (e) {
+        //     $('.sidemenu').sidenav('close');
+        //     $('.sidesettings').sidenav('close');
+        //     if (!$(this).hasClass("back-nav")) {
+        //         e.preventDefault();
+        //         window.history.back();
+        //     }
+        // });
+
+
+
+
     });
 
     return (
@@ -39,39 +54,15 @@ const SideMenu = () => {
                     <ul className="collapsible">
                         <li className="lvl1 ">
                             <div className=" waves-effect   index ">
-                                <Link to="/faqs">
+                                <Link to="/faqs" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-camera-timer"></i>
                                     <span className="title">FAQs</span>
                                 </Link>
                             </div>
                         </li>
-                        {/* <li className="lvl1 ">
-                            <div className=" waves-effect   index ">
-                                <Link to="/blog">
-                                    <i className="mdi mdi-all-inclusive"></i>
-                                    <span className="title">Blog</span>
-                                </Link>
-                            </div>
-                        </li>
-                        <li className="lvl1 ">
-                            <div className=" waves-effect   index ">
-                                <Link to="/testimonials">
-                                    <i className="mdi mdi-arrange-send-to-back"></i>
-                                    <span className="title">Testimonials</span>
-                                </Link>
-                            </div>
-                        </li>
-                        <li className="lvl1 ">
-                            <div className=" waves-effect   index ">
-                                <Link to="/team">
-                                    <i className="mdi mdi-border-outside"></i>
-                                    <span className="title">Team</span>
-                                </Link>
-                            </div>
-                        </li> */}
                         <li className="lvl1 ">
                             <div className=" waves-effect index ">
-                                <Link to="/about-us">
+                                <Link to="/about-us" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-bulletin-board"></i>
                                     <span className="title">About Us</span>
                                 </Link>
@@ -79,7 +70,7 @@ const SideMenu = () => {
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect index ">
-                                <Link to="/privacy-policy">
+                                <Link to="/privacy-policy" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-bulletin-board"></i>
                                     <span className="title">Privacy Policy</span>
                                 </Link>
@@ -87,7 +78,7 @@ const SideMenu = () => {
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect index ">
-                                <Link to="/terms-of-use">
+                                <Link to="/terms-of-use" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-bulletin-board"></i>
                                     <span className="title">Terms of Use</span>
                                 </Link>
@@ -95,7 +86,7 @@ const SideMenu = () => {
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect index ">
-                                <Link to="/data-protection">
+                                <Link to="/data-protection" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-bulletin-board"></i>
                                     <span className="title">Data Protection</span>
                                 </Link>
@@ -103,7 +94,7 @@ const SideMenu = () => {
                         </li>
                         <li className="lvl1 ">
                             <div className=" waves-effect index">
-                                <Link to="/contact-us">
+                                <Link to="/contact-us" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-beaker"></i>
                                     <span className="title">Contactus</span>
                                 </Link>
