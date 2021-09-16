@@ -54,7 +54,7 @@ const Home = () => {
                                     <div className="col s6 m6 l3">
                                         <div className="icon-block block">
                                             <div className="icon-area center primary-text"><i className="mdi mdi-sunglasses"></i></div>
-                                            <p className="title-area center">Book Day Trips &<br /> Activities(Coming Soon)</p>
+                                            <p className="title-area center">Book Day Trips &<br /> Activities</p>
                                         </div>
                                     </div>
                                 </div>

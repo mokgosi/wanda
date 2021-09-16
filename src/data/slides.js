@@ -8,7 +8,7 @@ export default [
     {
         "id": 1,
         "image": EmpowerImage,
-        "title": "Empower",
+        "title": "Elevate",
         "caption": "Empower local hosts & local businesses as you enjoy your travel experiences"
     }, {
         "id": 2,

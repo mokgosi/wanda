@@ -4,10 +4,35 @@ import EventsSlider from '../components/Events';
 import EventsData from '../data/events';
 import UserPlaceholder from '../assets/images/placeholders/user-10.jpg';
 import UpcomingEvents from '../data/upcomping-events';
+import { send } from 'emailjs-com';
 
 const Events = () => {
 
     const [upcoming, setUpcoming] = useState(UpcomingEvents);
+
+    const [toSend, setToSend] = useState({
+        first_name: '',
+        last_name: '',
+        email: '',
+        message: '',
+    });
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        send('service_mhs1yd8', 'template_6xwbhcu',
+            toSend,
+            'user_7QnH0uIbGMKmYfdCIvpSx'
+        ).then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        }).catch((err) => {
+            console.log('FAILED...', err);
+        });
+    };
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+    };
 
     return (
         <>
@@ -15,7 +40,7 @@ const Events = () => {
 
             <div className="container has-pagehead is-pagetitle">
                 <div className="section">
-                    <h5 className="pagetitle">Virtual Experiences</h5>
+                    <h5 className="pagetitle">Book</h5>
                 </div>
             </div>
 
@@ -33,53 +58,48 @@ const Events = () => {
                         <div className="col s12 pad-0"><h5 className="bot-20 sec-tit  ">Book a Free Concierge Session</h5>
                             <p className="pad-30">Considering Cape Town as your next travel or work destination? Or perhaps you're thinking of studying in Cape Town and want to know more about the city? Then you should book your free concierge session today.</p>
                             <div className="spacer"></div>
-
-
-                            <div className="row">
-                                <div className="input-field col s12">
-                                    <i className="mdi mdi-account-outline prefix"></i>
-                                    <input id="first_name" type="text" className="validate" />
-                                    <label htmlFor="first_name">First Name</label>
+                            <form onSubmit={onSubmit}>
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <i className="mdi mdi-account-outline prefix"></i>
+                                        <input id="first_name" name="first_name" type="text" className="validate" value={toSend.first_name} onChange={handleChange} />
+                                        <label htmlFor="first_name">First Name</label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="row">
-                                <div className="input-field col s12">
-                                    <i className="mdi mdi-account-outline prefix"></i>
-                                    <input id="last_name2" type="text" className="validate" />
-                                    <label htmlFor="last_name2">Last Name</label>
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <i className="mdi mdi-account-outline prefix"></i>
+                                        <input id="last_name" name="last_name" type="text" className="validate" value={toSend.last_name} onChange={handleChange} />
+                                        <label htmlFor="last_name">Last Name</label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="row">
-                                <div className="input-field col s12">
-                                    <i className="mdi mdi-email-outline prefix"></i>
-                                    <input id="email" type="email" className="validate" />
-                                    <label htmlFor="email">Email</label>
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <i className="mdi mdi-email-outline prefix"></i>
+                                        <input id="email" name="email" type="email" className="validate" value={toSend.email} onChange={handleChange} />
+                                        <label htmlFor="email">Email</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="input-field col s12 textarea">
-                                    <i className="mdi mdi-pencil prefix"></i>
-                                    <textarea id="textarea-prefix" className="materialize-textarea"></textarea>
-                                    <label htmlFor="textarea-prefix">Briefly Describe your request</label>
+                                <div className="row">
+                                    <div className="input-field col s12 textarea">
+                                        <i className="mdi mdi-pencil prefix"></i>
+                                        <textarea id="message" name="message" className="materialize-textarea" onChange={handleChange}>{toSend.reply_to}</textarea>
+                                        <label htmlFor="message">Briefly Describe your request</label>
 
+                                        <div className="spacer-small"></div>
+                                    </div>
+                                </div>
+                                <div className="row ">
+                                    <div className="spacer-small"></div>
+                                    <div className="spacer-small"></div>
+                                    <button type='submit' className="waves-effect waves-light btn bg-primary">Send</button>
                                     <div className="spacer-small"></div>
                                 </div>
-                            </div>
-                            <div className="row ">
-                                <div className="spacer-small"></div>
-                                <div className="spacer-small"></div>
-                                <a className="waves-effect waves-light btn bg-primary ">Send</a>
-                                <div className="spacer-small"></div>
-                            </div>
-
-
-
-
+                            </form>
 
                             {/* <ul className="events">
-
                                 {upcoming.map((e, i) => (
 
                                     <li className="event-item" key={e.id}>
