@@ -33,6 +33,7 @@ import "@mdi/font/css/materialdesignicons.min.css";
 import "./assets/fonts/mdi/appicon/appicon.css";
 import "./App.scss";
 import { Footer } from "react-materialize";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
 
@@ -86,6 +87,7 @@ const App = () => {
             <Route path="/data-protection" component={Protection} />
           </Switch>
 
+          <ScrollToTop />
           <SiteFooter />
         </div>
         {/* <Navbar /> */}

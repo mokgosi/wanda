@@ -118,6 +118,7 @@ const Protection = () => {
                         <div className="spacer-small"></div>
                         <div className="row ">
                             <div className="spacer-small"></div>
+                            <div className="spacer-small"></div>
                             <a className="waves-effect waves-light btn bg-primary ">Send</a>
                             <div className="spacer-small"></div>
                         </div>

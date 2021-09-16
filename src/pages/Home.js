@@ -12,6 +12,7 @@ import LikeALocal from '../components/LikeALocal';
 import Blogs from '../components/Blogs';
 import Navbar from '../components/Navbar';
 import Subscribe from '../components/Subscribe';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Home = () => {
 

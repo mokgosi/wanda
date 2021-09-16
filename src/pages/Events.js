@@ -30,8 +30,53 @@ const Events = () => {
                     <div className="spacer"></div>
 
                     <div className="row mb0">
-                        <div className="col s12 pad-0"><h5 className="bot-20 sec-tit  ">Upcoming Events</h5>
+                        <div className="col s12 pad-0"><h5 className="bot-20 sec-tit  ">Book a Free Concierge Session</h5>
+                            <p className="pad-30">Considering Cape Town as your next travel or work destination? Or perhaps you're thinking of studying in Cape Town and want to know more about the city? Then you should book your free concierge session today.</p>
                             <div className="spacer"></div>
+
+
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <i className="mdi mdi-account-outline prefix"></i>
+                                    <input id="first_name" type="text" className="validate" />
+                                    <label htmlFor="first_name">First Name</label>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <i className="mdi mdi-account-outline prefix"></i>
+                                    <input id="last_name2" type="text" className="validate" />
+                                    <label htmlFor="last_name2">Last Name</label>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <i className="mdi mdi-email-outline prefix"></i>
+                                    <input id="email" type="email" className="validate" />
+                                    <label htmlFor="email">Email</label>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="input-field col s12 textarea">
+                                    <i className="mdi mdi-pencil prefix"></i>
+                                    <textarea id="textarea-prefix" className="materialize-textarea"></textarea>
+                                    <label htmlFor="textarea-prefix">Briefly Describe your request</label>
+
+                                    <div className="spacer-small"></div>
+                                </div>
+                            </div>
+                            <div className="row ">
+                                <div className="spacer-small"></div>
+                                <div className="spacer-small"></div>
+                                <a className="waves-effect waves-light btn bg-primary ">Send</a>
+                                <div className="spacer-small"></div>
+                            </div>
+
+
+
+
 
                             {/* <ul className="events">
 
@@ -70,11 +115,11 @@ const Events = () => {
                     </div>
 
                     <div className="row mb0">
-                        <div className="col s12 pad-0">
+                        {/* <div className="col s12 pad-0">
                             <h5 className="bot-20 sec-tit  ">Popular Events</h5>
-                            <div className="spacer"></div>
+                            <div className="spacer"></div> */}
 
-                            {/* <ul className="events mini events-masonry row " >
+                        {/* <ul className="events mini events-masonry row " >
                                 {upcoming.map((e, i) => (
                                     <li className="event-item col s6">
                                         <div className="item-wrap ">
@@ -94,7 +139,7 @@ const Events = () => {
                                     </li>
                                 ))}
                             </ul> */}
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
