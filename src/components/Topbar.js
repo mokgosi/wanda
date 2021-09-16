@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import $ from 'jquery';
+import M from "materialize-css";
 
 const Topbar = () => {
 
@@ -27,11 +27,19 @@ const Topbar = () => {
         window.addEventListener("scroll", toggleVisibility);
     }, []);
 
+    function handleClick(e) {
+        e.preventDefault();
+        var elem = document.querySelector('.sidenav');
+        var instance = M.Sidenav.getInstance(elem);
+        instance.close();
+        window.history.back();
+    }
+
     return (
         <nav className={`fix_topscroll logo_on_fixed topbar navigation ${isVisible && 'isfixed'}`}>
             <div className="nav-wrapper container">
                 <a href="index.html" id="logo-container" className="brand-logo">Wanderfullyso</a>
-                <a href="#" data-target="" className="waves-effect waves-circle navicon back-button htmlmode show-on-large">
+                <a href="#" onClick={handleClick} data-target="" className="waves-effect waves-circle navicon back-button htmlmode show-on-large">
                     <i className="mdi mdi-chevron-left" data-page=""></i>
                 </a>
                 <a href="#" data-target="slide-nav" className="waves-effect waves-circle navicon sidenav-trigger show-on-large">

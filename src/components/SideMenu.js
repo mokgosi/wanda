@@ -14,21 +14,6 @@ const SideMenu = () => {
         var instances = M.Sidenav.init(sidenav, {
             edge: 'left'
         });
-
-        // let sidenav = document.querySelectorAll('.sidenav');
-
-        // $(document).on('click', '.back-button', function (e) {
-        //     $('.sidemenu').sidenav('close');
-        //     $('.sidesettings').sidenav('close');
-        //     if (!$(this).hasClass("back-nav")) {
-        //         e.preventDefault();
-        //         window.history.back();
-        //     }
-        // });
-
-
-
-
     });
 
     return (
