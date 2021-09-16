@@ -1,6 +1,16 @@
+import React, { useState, useEffect } from "react";
 import Navbar from '../components/Navbar';
+import M from "materialize-css";
 
 const Privacy = () => {
+
+    useEffect(() => {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems, {
+            accordion: false
+        });
+    });
+
     return (
         <>
             <div className="pagehead-bg primary-bg"></div>
