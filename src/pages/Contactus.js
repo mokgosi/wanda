@@ -41,7 +41,7 @@ const Contactus = () => {
                     <div className="spacer"></div>
                     <div className="map-wrap contactus">
                         <i className="mdi mdi-map-marker-outline "></i>
-                        <img className="responsive-img" src="../assets/images/placeholders/contact-map.jpg" alt="image" />
+                        {/* <img className="responsive-img" src="../assets/images/placeholders/contact-map.jpg" alt="image" /> */}
                     </div>
                     <div className="spacer"></div>
                     <div className="card contactus gray">
@@ -57,7 +57,7 @@ const Contactus = () => {
                         <div className="row ">
                             <div className="col s12 pad-0">
                                 <h5 className="bot-20 sec-tit  ">Contact</h5>
-                                <div>Phone: +2700 000 000<br />
+                                <div>Phone: +27WanderfullySo.<br />
                                     Email: email@wanderfullyso.com
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ const Contactus = () => {
                     <div className="card contactus gray">
                         <div className="row ">
                             <div className="col s12 pad-0">
-                                <h5 className="bot-20 sec-tit  ">Timing</h5>
+                                <h5 className="bot-20 sec-tit  ">Operating Hours</h5>
                                 <div>Monday to Friday :- 09:00 AM to 05:00 PM<br />
                                     Saturday :- 09:00 AM to 12:00 PM<br />
                                     Sunday Off
