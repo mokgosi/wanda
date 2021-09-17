@@ -34,11 +34,9 @@ import "./assets/fonts/mdi/appicon/appicon.css";
 import "./App.scss";
 import { Footer } from "react-materialize";
 import ScrollToTop from "./components/ScrollToTop";
+import Preloader from './components/Preloader';
 
 const App = () => {
-
-
-
 
   useEffect(() => {
     var elems = document.querySelectorAll('.collapsible');
@@ -65,6 +63,7 @@ const App = () => {
       <>
         <Topbar />
         <SideMenu />
+        {/* <Preloader /> */}
 
         <div className="content-area">
           <Switch>
@@ -75,7 +74,6 @@ const App = () => {
 
             <Route path="/events" component={Events} />
             <Route path="/book" component={Book} />
-
 
             <Route path="/wander" component={Wander} />
             <Route path="/feedback" component={Feedback} />

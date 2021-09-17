@@ -61,13 +61,7 @@ const About = () => {
                 <div className="section">
                     <div className="spacer-large"></div>
                     <div className="row">
-                        <div className="col s12 m12 l3">
-                            <div className="icon-block overlay">
-                                <div className="icon-area center primary-text"><i className="mdi mdi-speedometer"></i></div>
-                                <h6 className="title-area center">Our Hosts</h6>
-                                <p className="text-area center">We offer exciting authentic experiences and it’s all thanks to our Wanderful Hosts!</p>
-                            </div>
-                        </div>
+
                         <div className="col s12 m12 l3">
                             <div className="icon-block overlay">
                                 <div className="icon-area center primary-text"><i className="mdi mdi-spotlight"></i></div>
@@ -85,7 +79,7 @@ const About = () => {
                         <div className="col s12 m12 l3">
                             <div className="icon-block overlay">
                                 <div className="icon-area center primary-text"><i className="mdi mdi-lan"></i></div>
-                                <h6 className="title-area center">Empower</h6>
+                                <h6 className="title-area center">Elevate </h6>
                                 <p className="text-area center">We help empower locals as Wanderful Hosts so they are able to generate income for themselves and therefore directly benefit from tourism in their own country.</p>
                             </div>
                         </div>
@@ -93,11 +87,10 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="row primary-bg stats pad-15">
+            {/* <div className="row primary-bg stats pad-15">
                 <div className="spacer"></div>
-                {/* <h5 className="center bot-0 sec-tit white-text">Our Story</h5> */}
                 <p className="center-align white-text">We are passionate about building and growing WanderfullySo around the three pillars of Enjoy, Enhance and Empower.</p>
-            </div>
+            </div> */}
             <div className="container">
                 <div className="section">
                     <h5 className="center sec-tit">Our Story</h5>
@@ -120,10 +113,10 @@ const About = () => {
                         <a href="#!" className="btn btn-rounded">Know More</a>
                     </div> */}
                     <div className="spacer-large"></div>
-                    <div className="spacer"></div>
+                    {/* <div className="spacer"></div> */}
 
 
-                    <h5 className="center bot-20 sec-tit">Our Team</h5>
+                    {/* <h5 className="center bot-20 sec-tit">Our Hosts</h5>
                     <div className="slider testi-slider7 testi-boxed white-text primary-bg">
                         <ul className="slides transparent testimonials center">
                             <li>
@@ -188,7 +181,11 @@ const About = () => {
                                 </p>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
+
+                    <h5 className="center sec-tit">Our Hosts</h5>
+                    <p className="center-align">We offer exciting authentic experiences and it’s all thanks to our Wanderful Hosts!</p>
+
                 </div>
             </div>
             <Navbar />
