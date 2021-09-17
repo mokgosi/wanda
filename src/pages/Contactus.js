@@ -57,9 +57,7 @@ const Contactus = () => {
                         <div className="row ">
                             <div className="col s12 pad-0">
                                 <h5 className="bot-20 sec-tit  ">Contact</h5>
-                                <div>Phone: +27WanderfullySo.<br />
-                                    Email: email@wanderfullyso.com
-                                </div>
+                                <div>Email: email@wanderfullyso.com</div>
                             </div>
                         </div>
                     </div>
