@@ -12,7 +12,6 @@ import LikeALocal from '../components/LikeALocal';
 import Blogs from '../components/Blogs';
 import Navbar from '../components/Navbar';
 import Subscribe from '../components/Subscribe';
-import ScrollToTop from '../components/ScrollToTop';
 import M from "materialize-css";
 
 const Home = () => {
@@ -23,10 +22,8 @@ const Home = () => {
     const [testimonials, setTestimonials] = useState(TestimonialsData);
 
     useEffect(() => {
-        document.addEventListener('DOMContentLoaded', function () {
-            var subscribe = document.querySelector('#modal');
-            var instances = M.Modal.init(subscribe, {});
-        });
+        var subscribe = document.querySelector('#modal');
+        var instances = M.Modal.init(subscribe, {});
     }, []);
 
     return (
