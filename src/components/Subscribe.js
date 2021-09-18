@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import M from "materialize-css";
-import { send } from 'emailjs-com';
+import { send, init } from 'emailjs-com';
+
+init("user_7QnH0uIbGMKmYfdCIvpSx");
 
 const Subscribe = () => {
 
-    var elems = document.querySelectorAll('#modal');
-    var instances = M.Modal.init(elems, {});
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelector('#modal');
+        var instances = M.Modal.init(elems, {});
+    });
 
     const [toSend, setToSend] = useState({
         from_name: '',
@@ -14,14 +18,12 @@ const Subscribe = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        send('service_mhs1yd8', 'template_6xwbhcu',
-            toSend,
-            'user_7QnH0uIbGMKmYfdCIvpSx'
-        ).then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-        }).catch((err) => {
-            console.log('FAILED...', err);
-        });
+        send('service_ymsj22y', 'template_6xwbhcu', toSend)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }).catch((err) => {
+                console.log('FAILED...', err);
+            });
     };
 
     const handleChange = (e) => {

@@ -1,5 +1,5 @@
 import AppCarousel from '../components/AppCarousel';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Slides from '../data/home-slides';
 import LatesBlogs from '../data/home-blogs';
@@ -13,6 +13,7 @@ import Blogs from '../components/Blogs';
 import Navbar from '../components/Navbar';
 import Subscribe from '../components/Subscribe';
 import ScrollToTop from '../components/ScrollToTop';
+import M from "materialize-css";
 
 const Home = () => {
 
@@ -20,6 +21,13 @@ const Home = () => {
     const [blogs, setBlogs] = useState(LatesBlogs);
     const [locals, setLocals] = useState(LikeALocalData);
     const [testimonials, setTestimonials] = useState(TestimonialsData);
+
+    useEffect(() => {
+        document.addEventListener('DOMContentLoaded', function () {
+            var subscribe = document.querySelector('#modal');
+            var instances = M.Modal.init(subscribe, {});
+        });
+    }, []);
 
     return (
         <>

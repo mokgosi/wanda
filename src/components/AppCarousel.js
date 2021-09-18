@@ -12,8 +12,7 @@ const AppCarousel = ({ slides, height, width }) => {
             fullWidth: true,
             indicators: true, // this option is required for autoplay functionnality
         });
-
-        console.log(height);
+        // });
 
         // custom function for autoplaying 
         let indicatorItems = document.querySelectorAll('.carousel .indicator-item'),

@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import { send } from 'emailjs-com';
+import { send, init } from 'emailjs-com';
+init("user_7QnH0uIbGMKmYfdCIvpSx");
 
 const Contactus = () => {
 
     const [toSend, setToSend] = useState({
         first_name: '',
         last_name: '',
-        email: '',
+        reply_to: '',
         message: '',
     });
 
     const onSubmit = (e) => {
         e.preventDefault();
-        send('service_mhs1yd8', 'template_6xwbhcu',
-            toSend,
-            'user_7QnH0uIbGMKmYfdCIvpSx'
-        ).then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-        }).catch((err) => {
-            console.log('FAILED...', err);
-        });
+        send('service_ymsj22y', 'template_6xwbhcu', toSend)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }).catch((err) => {
+                console.log('FAILED...', err);
+            });
     };
 
     const handleChange = (e) => {
@@ -92,8 +91,8 @@ const Contactus = () => {
                             <div className="row">
                                 <div className="input-field col s12">
                                     <i className="mdi mdi-email-outline prefix"></i>
-                                    <input id="email" name="email" type="email" className="validate" value={toSend.email} onChange={handleChange} />
-                                    <label htmlFor="email">Email</label>
+                                    <input id="reply_to" name="reply_to" type="email" className="validate" value={toSend.reply_to} onChange={handleChange} />
+                                    <label htmlFor="reply_to">Email</label>
                                 </div>
                             </div>
                             <div className="row">
