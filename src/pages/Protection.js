@@ -116,9 +116,8 @@ const Protection = () => {
                             <div className="row">
                                 <div className="input-field col s12">
                                     <i className="mdi mdi-account-outline prefix"></i>
-                                    <input
+                                    <input type="text" id='first_name'
                                         className='validate'
-                                        type="text" id='first_name'
                                         {...register('first_name', {
                                             required: "Required"
                                         })} />
@@ -131,9 +130,8 @@ const Protection = () => {
                             <div className="row">
                                 <div className="input-field col s12">
                                     <i className="mdi mdi-account-outline prefix"></i>
-                                    <input
+                                    <input type="text" id='last_name'
                                         className='validate'
-                                        type="text" id='last_name'
                                         {...register('last_name', {
                                             required: "Required"
                                         })} />
@@ -145,9 +143,8 @@ const Protection = () => {
                             <div className="row">
                                 <div className="input-field col s12">
                                     <i className="mdi mdi-email-outline prefix"></i>
-                                    <input
+                                    <input type="text" id='email'
                                         className='validate'
-                                        type="text" id='email'
                                         {...register('email', {
                                             required: "Required"
                                         })} />
@@ -160,7 +157,8 @@ const Protection = () => {
                                 <div className="input-field col s12 textarea">
                                     <i className="mdi mdi-pencil prefix"></i>
 
-                                    <textarea id="message" name="message"
+                                    <textarea
+                                        id="message"
                                         className="materialize-textarea validate"
                                         {...register('message', {
                                             required: "Required"

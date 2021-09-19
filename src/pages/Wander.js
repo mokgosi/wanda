@@ -9,6 +9,7 @@ const Discover = () => {
 
     return (
         <>
+
             <div className="pagehead-bg primary-bg" ></div>
             <div className="container has-pagehead is-pagetitle">
                 <div className="section">
@@ -16,23 +17,24 @@ const Discover = () => {
                 </div>
             </div>
 
-            <div className="container over pl0 pr0 overhide portfw">
-                <div className="section pt0 pb0">
-                    <div className="row ui-mediabox portfolio fullwidth">
+            <div class="container over">
+                <div class="section pt0">
+                    <div class="spacer"></div>
+                    <div class="row ui-mediabox portfolio  ">
                         {wander.map((w, i) => (
-                            <div className="col s12" key={w.id}>
-                                <a className="img-wrap" href={w.image} data-fancybox="images" data-caption={w.title}>
-                                    <img alt="image" className="" style={{ width: `100%` }} src={w.image} />
-                                </a>
+                            <div className="col s6" key={w.id}>
+                                <div className="video-responsive">
+                                    <iframe width="560"
+                                        height="315"
+                                        src={w.itemId}
+                                        title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
                                 <div className="port-data">
                                     <h5 className="truncate">{w.title}</h5>
                                     <p>{w.caption}</p>
-                                    <a href="#!">Explore <i className="mdi mdi-arrow-right"></i></a>
-                                    <div className="user-actions">
-                                        <a href="#!" className='active'><i className="mdi mdi-thumb-up-outline"></i><span>845</span></a>
-                                        <a href="#!" ><i className="mdi mdi-heart-outline"></i><span>376</span></a>
-                                        <a href="#!" ><i className="mdi mdi-comment-outline"></i><span>731</span></a>
-                                    </div>
                                 </div>
                             </div>
                         ))}
