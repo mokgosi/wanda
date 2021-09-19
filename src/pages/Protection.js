@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Navbar from '../components/Navbar';
 import M from "materialize-css";
+import { send, init } from 'emailjs-com';
+import { useForm } from 'react-hook-form';
+
+init("user_7QnH0uIbGMKmYfdCIvpSx");
 
 const Protection = () => {
 
@@ -10,6 +14,24 @@ const Protection = () => {
             accordion: false
         });
     });
+
+    const [isPending, setIsPending] = useState(false);
+
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+    const onSubmit = (data) => {
+
+        setIsPending(true);
+
+        send('service_qrhtoh6', 'template_6xwbhcu', data)
+            .then((response) => {
+                setIsPending(false);
+                console.log('SUCCESS!', response.status, response.text);
+            }).catch((err) => {
+                setIsPending(false);
+                console.log('FAILED...', err);
+            });
+    }
 
     return (
         <>
@@ -89,50 +111,71 @@ const Protection = () => {
                         </div>
                     </div>
 
-
                     <div className="pad-15">
-                        <div className="row">
-                            <div className="input-field col s12">
-                                <i className="mdi mdi-account-outline prefix"></i>
-                                <input id="first_name" type="text" className="validate" />
-                                <label htmlFor="first_name">First Name</label>
-                            </div>
-                        </div>
+                        <form id="protection-data" onSubmit={handleSubmit(onSubmit)} noValidate>
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <i className="mdi mdi-account-outline prefix"></i>
+                                    <input
+                                        className='validate'
+                                        type="text" id='first_name'
+                                        {...register('first_name', {
+                                            required: "Required"
+                                        })} />
+                                    <label htmlFor="first_name">First Name</label>
+                                    <span className="helper-text">{errors.first_name && errors.first_name.message}</span>
 
-                        <div className="row">
-                            <div className="input-field col s12">
-                                <i className="mdi mdi-account-outline prefix"></i>
-                                <input id="last_name2" type="text" className="validate" />
-                                <label htmlFor="last_name2">Last Name</label>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="row">
-                            <div className="input-field col s12">
-                                <i className="mdi mdi-email-outline prefix"></i>
-                                <input id="email" type="email" className="validate" />
-                                <label htmlFor="email">Email</label>
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <i className="mdi mdi-account-outline prefix"></i>
+                                    <input
+                                        className='validate'
+                                        type="text" id='last_name'
+                                        {...register('last_name', {
+                                            required: "Required"
+                                        })} />
+                                    <label htmlFor="last_name">Last Name</label>
+                                    <span className="helper-text">{errors.last_name && errors.last_name.message}</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="row">
-                            <div className="input-field col s12 textarea">
-                                <i className="mdi mdi-pencil prefix"></i>
-                                <textarea id="textarea-prefix" className="materialize-textarea"></textarea>
-                                <label htmlFor="textarea-prefix">Describe your issue</label>
-                                <span className="helper-text" data-error="Incorrect Email" data-success="Correct Email">Please
-                                    briefly explain your issue. Please also indicate your relationship with WanderfullySo
-                                    (for example you’re a Wanderer, an advertiser, or a regulator)</span>
-                                <div className="spacer-small"></div>
+                            <div className="row">
+                                <div className="input-field col s12">
+                                    <i className="mdi mdi-email-outline prefix"></i>
+                                    <input
+                                        className='validate'
+                                        type="text" id='email'
+                                        {...register('email', {
+                                            required: "Required"
+                                        })} />
+                                    <label htmlFor="email">Email</label>
+                                    <span className="helper-text">{errors.email && errors.email.message}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="spacer-small"></div>
-                        <div className="row ">
-                            <div className="spacer-small"></div>
-                            <div className="spacer-small"></div>
-                            <a className="waves-effect waves-light btn bg-primary ">Send</a>
-                            <div className="spacer-small"></div>
-                        </div>
+
+                            <div className="row">
+                                <div className="input-field col s12 textarea">
+                                    <i className="mdi mdi-pencil prefix"></i>
+
+                                    <textarea id="message" name="message"
+                                        className="materialize-textarea validate"
+                                        {...register('message', {
+                                            required: "Required"
+                                        })}></textarea>
+
+                                    <label htmlFor="message">Please briefly explain your issue.
+                                        Please also indicate your relationship with Wanderfullyso.</label>
+                                    <span className="helper-text">{errors.message && errors.message.message}</span>
+
+                                </div>
+                            </div>
+                            <div className="row ">
+                                <button type='submit' className="waves-effect waves-light btn bg-primary">Send</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

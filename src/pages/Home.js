@@ -23,7 +23,14 @@ const Home = () => {
 
     useEffect(() => {
         var subscribe = document.querySelector('#modal');
-        var instances = M.Modal.init(subscribe, {});
+        var instances = M.Modal.init(subscribe, {
+            onCloseEnd: function () {
+                console.log('closed');
+                document.querySelector('#subscribe').reset({ from_name: '', email: '' }, {
+                    keepErrors: false
+                });
+            },
+        });
     }, []);
 
     return (

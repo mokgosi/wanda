@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { send, init } from 'emailjs-com';
+import { useForm } from 'react-hook-form';
+
 init("user_7QnH0uIbGMKmYfdCIvpSx");
 
 const Contactus = () => {
 
-    const [toSend, setToSend] = useState({
-        first_name: '',
-        last_name: '',
-        reply_to: '',
-        message: '',
-    });
+    const [isPending, setIsPending] = useState(false);
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        send('service_ymsj22y', 'template_6xwbhcu', toSend)
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+    const onSubmit = (data) => {
+
+        setIsPending(true);
+
+        send('service_qrhtoh6', 'template_6xwbhcu', data)
             .then((response) => {
+                setIsPending(false);
                 console.log('SUCCESS!', response.status, response.text);
             }).catch((err) => {
+                setIsPending(false);
                 console.log('FAILED...', err);
             });
-    };
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        setToSend({ ...toSend, [e.target.name]: e.target.value });
-    };
+        console.log(data);
+    }
 
     return (
         <>
@@ -73,32 +73,64 @@ const Contactus = () => {
                         </div>
                     </div>
                     <div className="pad-15">
-                        <form onSubmit={onSubmit}>
+                        <form id="subscribe" onSubmit={handleSubmit(onSubmit)} noValidate>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <i className="mdi mdi-account-outline prefix"></i>
-                                    <input id="first_name" name="first_name" type="text" className="validate" value={toSend.first_name} onChange={handleChange} />
+
+                                    <input
+                                        className='validate'
+                                        type="text" id='first_name'
+                                        {...register('first_name', {
+                                            required: "Required"
+                                        })} />
+                                    <span className="helper-text">{errors.first_name && errors.first_name.message}</span>
+
                                     <label htmlFor="first_name">First Name</label>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <i className="mdi mdi-account-outline prefix"></i>
-                                    <input id="last_name" name="last_name" type="text" className="validate" value={toSend.last_name} onChange={handleChange} />
+
+                                    <input
+                                        className='validate'
+                                        type="text" id='last_name'
+                                        {...register('last_name', {
+                                            required: "Required"
+                                        })} />
+                                    <span className="helper-text">{errors.last_name && errors.last_name.message}</span>
+
                                     <label htmlFor="last_name">Last Name</label>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="input-field col s12">
                                     <i className="mdi mdi-email-outline prefix"></i>
-                                    <input id="reply_to" name="reply_to" type="email" className="validate" value={toSend.reply_to} onChange={handleChange} />
+
+                                    <input
+                                        className='validate'
+                                        type="email" id='email'
+                                        {...register('email', {
+                                            required: "Required"
+                                        })} />
+                                    <span className="helper-text">{errors.email && errors.email.message}</span>
+
                                     <label htmlFor="reply_to">Email</label>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="input-field col s12 textarea">
                                     <i className="mdi mdi-pencil prefix"></i>
-                                    <textarea id="message" name="message" className="materialize-textarea" onChange={handleChange} value={toSend.message}></textarea>
+
+                                    <textarea id="message" name="message"
+                                        className="materialize-textarea validate"
+                                        {...register('message', {
+                                            required: "Required"
+                                        })}></textarea>
+
+                                    <span className="helper-text">{errors.message && errors.message.message}</span>
+
                                     <label htmlFor="message">Tell us more</label>
                                 </div>
                             </div>
