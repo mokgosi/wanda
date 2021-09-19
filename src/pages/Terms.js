@@ -1,3 +1,5 @@
+import Navbar from '../components/Navbar';
+
 const Terms = () => {
     return (
         <>
@@ -237,7 +239,7 @@ const Terms = () => {
                     </div>
                 </div>
             </div>
-
+            <Navbar />
         </>
     );
 }
