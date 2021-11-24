@@ -1,2 +1,2 @@
 # wanda
-Wanda
+A React App
