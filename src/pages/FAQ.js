@@ -4,12 +4,25 @@ import M from "materialize-css";
 
 const FAQ = () => {
 
+    const [faqs, setFAQs] = useState([]);
+
     useEffect(() => {
         var elems = document.querySelectorAll('.collapsible');
         var instances = M.Collapsible.init(elems, {
             accordion: false
         });
-    });
+
+        fetch('https://localhost:8000/api/v1/faqs/', {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token: fasdfasdfasdf7a7f858adf',
+            }
+        })
+        .then(resp => resp.json())
+        .then(resp => setFAQs(resp))
+        .catch(error => console.log(error))
+    }, []);
 
     return (
         <>

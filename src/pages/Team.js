@@ -9,8 +9,7 @@ const Team = () => {
 
     return (
         <>
-            <div className="pagehead-bg primary-bg">
-            </div>
+            <div className="pagehead-bg primary-bg"></div>
             <div className="container has-pagehead is-pagetitle">
                 <div className="section">
                     <h5 className="pagetitle">Team</h5>
@@ -37,7 +36,6 @@ const Team = () => {
                                 <div className="spacer"></div>
                             </div>
                         ))}
-
                     </div>
                 </div>
             </div>

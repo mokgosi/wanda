@@ -38,18 +38,34 @@ const SideMenu = () => {
                 <li className="menulinks">
                     <ul className="collapsible">
                         <li className="lvl1 ">
-                            <div className=" waves-effect   index ">
-                                <Link to="/faqs" onClick={() => setSlider(s => !s)}>
-                                    <i className="mdi mdi-camera-timer"></i>
-                                    <span className="title">FAQs</span>
-                                </Link>
-                            </div>
-                        </li>
-                        <li className="lvl1 ">
                             <div className=" waves-effect index ">
                                 <Link to="/about-us" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-bulletin-board"></i>
                                     <span className="title">About Us</span>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="lvl1 ">
+                            <div className=" waves-effect index">
+                                <Link to="/contact-us" onClick={() => setSlider(s => !s)}>
+                                    <i className="mdi mdi-beaker"></i>
+                                    <span className="title">Contactus</span>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="lvl1 ">
+                            <div className=" waves-effect   index ">
+                                <Link to="/testimonials" onClick={() => setSlider(s => !s)}>
+                                    <i className="mdi mdi-camera-timer"></i>
+                                    <span className="title">Testimonials</span>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="lvl1 ">
+                            <div className=" waves-effect   index ">
+                                <Link to="/faqs" onClick={() => setSlider(s => !s)}>
+                                    <i className="mdi mdi-camera-timer"></i>
+                                    <span className="title">FAQs</span>
                                 </Link>
                             </div>
                         </li>
@@ -74,14 +90,6 @@ const SideMenu = () => {
                                 <Link to="/data-protection" onClick={() => setSlider(s => !s)}>
                                     <i className="mdi mdi-bulletin-board"></i>
                                     <span className="title">Data Protection</span>
-                                </Link>
-                            </div>
-                        </li>
-                        <li className="lvl1 ">
-                            <div className=" waves-effect index">
-                                <Link to="/contact-us" onClick={() => setSlider(s => !s)}>
-                                    <i className="mdi mdi-beaker"></i>
-                                    <span className="title">Contactus</span>
                                 </Link>
                             </div>
                         </li>

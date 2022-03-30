@@ -8,12 +8,25 @@ init("user_7QnH0uIbGMKmYfdCIvpSx");
 
 const Protection = () => {
 
+    const [protection, setProtection] = useState([]);
+
     useEffect(() => {
         var elems = document.querySelectorAll('.collapsible');
         var instances = M.Collapsible.init(elems, {
             accordion: false
         });
-    });
+
+        fetch('https://localhost:8000/api/v1/protection/', {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token: fasdfasdfasdf7a7f858adf',
+            }
+        })
+        .then(resp => resp.json())
+        .then(resp => setProtection(resp))
+        .catch(error => console.log(error))
+    },[]);
 
     const [isPending, setIsPending] = useState(false);
 

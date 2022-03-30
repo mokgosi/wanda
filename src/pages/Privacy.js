@@ -4,12 +4,26 @@ import M from "materialize-css";
 
 const Privacy = () => {
 
+    const [faqs, setPrivacy] = useState([]);
+
     useEffect(() => {
         var elems = document.querySelectorAll('.collapsible');
         var instances = M.Collapsible.init(elems, {
             accordion: false
         });
-    });
+
+        fetch('https://localhost:8000/api/v1/privacy/', {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token: fasdfasdfasdf7a7f858adf',
+            }
+        })
+        .then(resp => resp.json())
+        .then(resp => setPrivacy(resp))
+        .catch(error => console.log(error))
+
+    }, []);
 
     return (
         <>

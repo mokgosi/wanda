@@ -13,12 +13,12 @@ const Footer = () => {
             <div className="container footer-content">
                 <div className="row">
                     <div className="">
-                        <h5 className="logo">Wonderfullyso</h5>
+                        <h5 className="logo">Wanderfullyso</h5>
                     </div>
                     <div className="link-wrap">
                         <ul className="link-ul">
                             <li><a href="#!"><i className="mdi mdi-phone"></i> +27WanderfullySo.</a></li>
-                            <li><a href="#!"><i className="mdi mdi-email"></i>email@wonderfullyso.com</a></li>
+                            <li><a href="#!"><i className="mdi mdi-email"></i>email@wanderfullyso.com</a></li>
                             <li><a href="#!"><i className="mdi mdi-map-marker"></i>Cape Town, South Africa</a></li>
                         </ul>
                         <SocialMedia socials={socials} />

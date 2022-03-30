@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Slides from '../data/slides';
 import useWindowDimensions from "../utils/useWindowDimensions";
 import AppCarousel from '../components/AppCarousel';
-import SiteIcon from '../assets/images/32x32.png';
 
 const Welcome = () => {
 

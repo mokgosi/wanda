@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import M from "materialize-css";
 
 import Topbar from './components/Topbar';
 import SideMenu from './components/SideMenu';
 import SiteFooter from './components/Footer';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 
 import Welcome from './pages/Welcome';
 import Home from './pages/Home';
@@ -14,7 +14,6 @@ import Book from './pages/Book';
 import Wander from './pages/Wander';
 import Feedback from './pages/Feedback';
 import Tips from './pages/Tips';
-import Blog from './pages/Blog';
 import BlogView from './pages/BlogView';
 
 import FAQs from './pages/FAQ';
@@ -32,18 +31,18 @@ import "materialize-css/dist/css/materialize.min.css";
 import "@mdi/font/css/materialdesignicons.min.css";
 import "./assets/fonts/mdi/appicon/appicon.css";
 import "./App.scss";
-import { Footer } from "react-materialize";
+// import { Footer } from "react-materialize";
 import ScrollToTop from "./components/ScrollToTop";
-import Preloader from './components/Preloader';
+// import Preloader from './components/Preloader';
 
 const App = () => {
 
   useEffect(() => {
     var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, {});
+    M.Collapsible.init(elems, {});
 
     var nav = document.querySelectorAll('.sidenav');
-    var navigator = M.Sidenav.init(nav, {
+    M.Sidenav.init(nav, {
 
       onOpenStart: function () {
         document.querySelector('body').classList.add("menu-open");
